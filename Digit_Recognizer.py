@@ -7,7 +7,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import Callback
 from tensorflow.keras.datasets import mnist
-from PIL import Image
 
 class StreamlitProgressCallback(Callback):
     def __init__(self, epochs):
@@ -22,7 +21,7 @@ class StreamlitProgressCallback(Callback):
 
 st.title(':blue[DIGIT RECOGNIZER]')
 # Load Data
-st.header('Load Data')
+st.header('Load Data (MNIST Dataset)')
 if st.button('Load'):
     (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
     st.write("Shape of X_train:", X_train.shape)
