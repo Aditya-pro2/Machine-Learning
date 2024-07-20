@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 os.system('runipy DigitRecognizer.ipynb')
-model = load_model('model')
+model = load_model('model.h5')
 st.header("Write a digit below:")
 
 #x = st.checkbox("Tick to Draw, Untick to Delete", True)
