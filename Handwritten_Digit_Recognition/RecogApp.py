@@ -6,7 +6,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
-model = load_model("https://github.com/Aditya-pro2/Machine-Learning/blob/main/Handwritten_Digit_Recognition/DigitRecognizer.keras")
+model = load_model("github.com/Aditya-pro2/Machine-Learning/blob/main/Handwritten_Digit_Recognition/DigitRecognizer.keras")
 st.header("Write a digit below:")
 
 #x = st.checkbox("Tick to Draw, Untick to Delete", True)
