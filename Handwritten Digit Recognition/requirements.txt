@@ -2,3 +2,6 @@ numpy
 pandas
 tensorflow
 matplotlib
+streamlit
+streamlit_drawable_canvas
+opencv-python
