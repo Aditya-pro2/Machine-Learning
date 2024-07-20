@@ -7,9 +7,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
-p = os.path.join(os.path.dirname(__file__), 'DigitRecognizer.keras')
-if not os.path.isdir(p):
-    os.system('runipy DigitRecognizer.ipynb')
+os.system('runipy DigitRecognizer.ipynb')
 model = load_model('DigitRecognizer.keras')
 st.header("Write a digit below:")
 
