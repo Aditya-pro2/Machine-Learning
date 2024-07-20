@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 import numpy as np
@@ -6,7 +7,10 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
-model = load_model("github.com/Aditya-pro2/Machine-Learning/blob/main/Handwritten_Digit_Recognition/DigitRecognizer.keras")
+p = os.path.join(os.path.dirname(__file__), 'DigitRecognizer.keras')
+if not os.path.isdir(p):
+    os.system('runipy DigitRecognizer.ipynb')
+model = load_model('DigitRecognizer.keras')
 st.header("Write a digit below:")
 
 #x = st.checkbox("Tick to Draw, Untick to Delete", True)
