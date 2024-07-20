@@ -5,7 +5,7 @@ import cv2
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
-st.title(":blue[DIGIT RECOGNIZER]")
+st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 model = load_model("DigitRecognizer.keras")
 st.header("Write a digit below:")
 
