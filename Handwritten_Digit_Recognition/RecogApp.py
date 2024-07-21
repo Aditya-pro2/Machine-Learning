@@ -3,12 +3,13 @@ from streamlit_drawable_canvas import st_canvas
 import numpy as np
 import cv2
 import tensorflow as tf
+import keras
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 
 @st.cache(allow_output_mutation = True)
 def load_model():
-    model=tf.keras.models.load_model('models/Digit Recognizer.keras', compile = False)
+    model = keras.models.load_model("models/Digit Recognizer.keras")
     return model
 
 with st.spinner("Loading Model...."):
