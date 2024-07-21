@@ -18,7 +18,7 @@ def load(p):
         print("Error loading the model:", e)
         return None
 
-model = load('DigitRecognizer.keras')
+model = load('/mount/src/machine-learning/Handwritten_Digit_Recognition/DigitRecognizer.keras')
 
 st.header("Write a digit below:")
 
