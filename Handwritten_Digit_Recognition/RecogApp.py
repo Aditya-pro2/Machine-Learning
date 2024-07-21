@@ -6,7 +6,7 @@ import tensorflow as tf
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 
-model = tf.keras.models.load_model("C:\Users\adity\DigitRecognizer.keras")
+model = tf.keras.models.load_model(r"C:\Users\adity\DigitRecognizer.keras")
 
 st.header("Write a digit below:")
 
