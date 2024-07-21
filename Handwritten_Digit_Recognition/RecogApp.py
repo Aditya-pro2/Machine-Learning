@@ -1,14 +1,19 @@
-import os
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 import numpy as np
 import cv2
 import tensorflow as tf
-from tensorflow.keras.models import load_model
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
-os.system('runipy DigitRecognizer.ipynb')
-model = load_model('model.h5')
+
+@st.cache(allow_output_mutation = True)
+def load_model():
+    model=tf.keras.models.load_model('models/Digit Recognizer.keras')
+    return model
+
+with st.spinner("Loading Model...."):
+    model = load_model()
+
 st.header("Write a digit below:")
 
 #x = st.checkbox("Tick to Draw, Untick to Delete", True)
