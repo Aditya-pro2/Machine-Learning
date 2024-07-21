@@ -1,8 +1,0 @@
-numpy==1.24.0
-pandas
-tensorflow
-matplotlib
-streamlit
-streamlit_drawable_canvas
-opencv-python-headless
-keras
