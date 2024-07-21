@@ -9,7 +9,8 @@ st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 
 @st.cache(allow_output_mutation = True)
 def load_model():
-    model = keras.models.load_model("models/Digit Recognizer.keras")
+    p = keras.utils.get_file(origin = "https://github.com/Aditya-pro2/Machine-Learning/blob/main/Handwritten_Digit_Recognition/models/DigitRecognizer.keras", extract = True)
+    model = keras.models.load_model(p)
     return model
 
 with st.spinner("Loading Model...."):
