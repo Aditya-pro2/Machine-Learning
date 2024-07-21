@@ -8,7 +8,7 @@ import keras
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 
 @st.cache(allow_output_mutation = True)
-def load_model_safe(p):
+def load_model():
     model = keras.models.load_model("models/DigitRecognizer.keras")
     return model
 
