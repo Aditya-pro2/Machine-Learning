@@ -6,7 +6,7 @@ import tensorflow as tf
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 
-model = tf.keras.models.load_model('/mount/src/machine-learning/Handwritten_Digit_Recognition/DigitRecognizer.keras')
+model = tf.keras.models.load_model('/mount/src/machine-learning/Handwritten_Digit_Recognition/model.weights.h5')
 
 st.header("Write a digit below:")
 
