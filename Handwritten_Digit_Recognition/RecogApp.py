@@ -6,19 +6,7 @@ import tensorflow as tf
 
 st.title(":blue[HANDWRITTEN DIGIT RECOGNIZER]")
 
-def load(p):
-    try:
-        with tf.keras.backend.name_scope('model_loading'):
-            model = tf.keras.models.load_model(p, compile = False)
-        return model
-    except IndexError as e:
-        print("IndexError:", e)
-        return None
-    except Exception as e:
-        print("Error loading the model:", e)
-        return None
-
-model = load('/mount/src/machine-learning/Handwritten_Digit_Recognition/DigitRecognizer.keras')
+model = tf.keras.models.load_model('/mount/src/machine-learning/Handwritten_Digit_Recognition/DigitRecognizer.keras')
 
 st.header("Write a digit below:")
 
